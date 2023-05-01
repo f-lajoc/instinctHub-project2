@@ -124,29 +124,4 @@ const projects = [
 
 const projectList = document.getElementById("project");
 
-projects.map((option, index) => {
-	let item = `
-    <div class="number"><span>${index + 1}</span></div>
-	<div class="details">
-		<img src="${option.image}" alt="${option.title}" />
-		<h2>${option.title}</h2>
-		<p>${option.brief}</p>
-		<a href="${option.details_link}">View Project</a>
-		<a href="${option.github_link}">GitHub Repository</a>
-		<div class="comments">
-			<h3>Comments:</h3>
-			<ul>${option.comments.map((comment) => {
-						return `<li>
-								<strong>@${comment.username}:</strong> ${comment.comment}
-							</li>`;
-					})}
-			</ul>
-		</div>
-    </div>
-
-    `;
-	let li = document.createElement("LI");
-	li.classList.add("items");
-	li.innerHTML = item;
-	projectList.append(li);
-});
+// Your solution here.
