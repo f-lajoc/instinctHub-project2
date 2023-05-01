@@ -96,6 +96,30 @@ const projects = [
 			},
 		],
 	},
+	{
+		title: "Geolocation App",
+		brief:
+			"A geo location app that shows direction and allows users to navigate within the communities they wish to visit.",
+		details_link: "https://example.com/geolocation-app",
+		github_link: "https://github.com/example/geolocation-app",
+		image: "assets/images/6-geolocation.jpg",
+		comments: [
+			{
+				username: "victoria",
+				comment:
+					"The location app has really helped me and my family to navigate through the most remote areas we've ever visited.",
+			},
+			{
+				username: "samson",
+				comment:
+					"Lovely geolocation app; smooth interface and great user experience.",
+			},
+			{
+				username: "loveth",
+				comment: "Overall, good work!",
+			},
+		],
+	},
 ];
 
 const projectList = document.getElementById("project");
@@ -103,21 +127,21 @@ const projectList = document.getElementById("project");
 projects.map((option, index) => {
 	let item = `
     <div class="number"><span>${index + 1}</span></div>
-					<div>
-    <img src="${option.image}" alt="Project 1" />
-    <h2>${option.title}</h2>
-    <p>${option.brief}</p>
-    <a href="${option.details_link}">View Project</a>
-    <a href="${option.github_link}">GitHub Repository</a>
-    <div class="comments">
-        <h3>Comments:</h3>
-        <ul>${option.comments.map((comment) => {
-					return `<li>
-							<strong>@${comment.username}:</strong> ${comment.comment}
-						</li>`;
-				})}
-        </ul>
-    </div>
+	<div class="details">
+		<img src="${option.image}" alt="${option.title}" />
+		<h2>${option.title}</h2>
+		<p>${option.brief}</p>
+		<a href="${option.details_link}">View Project</a>
+		<a href="${option.github_link}">GitHub Repository</a>
+		<div class="comments">
+			<h3>Comments:</h3>
+			<ul>${option.comments.map((comment) => {
+						return `<li>
+								<strong>@${comment.username}:</strong> ${comment.comment}
+							</li>`;
+					})}
+			</ul>
+		</div>
     </div>
 
     `;

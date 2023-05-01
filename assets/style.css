@@ -88,6 +88,9 @@ textarea {
 	border-radius: 100%;
 	margin-right: 20px;
 }
+.project-list li .details {
+	max-width: 350px;
+}
 
 .project-list li h2 {
 	margin: 0;
