@@ -10,21 +10,28 @@ Modern concepts of JavaScript project
 - [Links](#links)
 - [Author](#author)
 
-### Brief
+## Brief
 A dynamic project page built using JavaScript to display a list of projects with their details. Each project card includes a title, brief description, links to view the project and its GitHub repository, and comments from users.
 
-### Features
+## Features
 - Displays a list of projects with project cards.
 - Each project card includes project title, brief description, links, and user comments.
 - Responsive design for various screen sizes.
 
-### Pictures
+## Pictures
 
 
-### Video
+## Video
 
 
-### Links
+## Links
+- Live site - ()
+- Solution link - ()
 
-
-### Author 
+## Author 
+- Twitter - [@lajoc__](https://www.twitter.com/lajoc__)
+- Instagram - [@lajoc_devs](https://www.instagram.com/lajoc_devs)
+- Codepen - [@lajoc__](https://codepen.io/lajoc__/pen/bGvYWjR)
+- Github - [f-lajoc ](https://github.com/f-lajoc)
+- LinkedIn - [bolaji funmilola](https://www.linkedin.com/in/funmilola-b-b4044b13b)
+- Medium - [Funmi Lajoc](https://medium.com/@lajoc_)
