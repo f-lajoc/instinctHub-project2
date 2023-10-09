@@ -1,10 +1,11 @@
+'use strict'
 const projects = [
 	{
 		title: "E-Commerce Website",
 		brief: "An online store for selling products.",
 		details_link: "https://example.com/e-commerce",
 		github_link: "https://github.com/example/e-commerce",
-		image: "assets/images/1-e-commerce.jpg",
+		image: "images/1-e-commerce.jpg",
 		comments: [
 			{ username: "eze12", comment: "Great website, I love the design!" },
 			{
@@ -13,12 +14,13 @@ const projects = [
 			},
 		],
 	},
+	
 	{
 		title: "Weather App",
 		brief: "A web app that displays the current weather for a given location.",
 		details_link: "https://example.com/weather-app",
 		github_link: "https://github.com/example/weather-app",
-		image: "assets/images/2-weather-app.jpg",
+		image: "images/2-weather-app.jpg",
 		comments: [
 			{
 				username: "abdul",
@@ -30,12 +32,13 @@ const projects = [
 			},
 		],
 	},
+	
 	{
 		title: "To-Do List",
 		brief: "A simple to-do list web app.",
 		details_link: "https://example.com/to-do-list",
 		github_link: "https://github.com/example/to-do-list",
-		image: "assets/images/3-to-do-app.jpg",
+		image: "images/3-to-do-app.jpg",
 		comments: [
 			{
 				username: "user5",
@@ -48,13 +51,14 @@ const projects = [
 			},
 		],
 	},
+	
 	{
 		title: "Quiz App",
 		brief:
 			"A quiz app that allows users to create and take quizzes on various topics.",
 		details_link: "https://example.com/quiz-app",
 		github_link: "https://github.com/example/quiz-app",
-		image: "assets/images/4-quiz-app.jpg",
+		image: "images/4-quiz-app.jpg",
 		comments: [
 			{
 				username: "ezekiel",
@@ -72,13 +76,14 @@ const projects = [
 			},
 		],
 	},
+	
 	{
 		title: "Freelancing App",
 		brief:
 			"A freelancing app that shows available jobs information based on user location.",
 		details_link: "https://example.com/weather-app",
 		github_link: "https://github.com/example/weather-app",
-		image: "assets/images/5-freelancing.jpg",
+		image: "images/5-freelancing.jpg",
 		comments: [
 			{
 				username: "jadesola",
@@ -96,13 +101,14 @@ const projects = [
 			},
 		],
 	},
+	
 	{
 		title: "Geolocation App",
 		brief:
 			"A geo location app that shows direction and allows users to navigate within the communities they wish to visit.",
 		details_link: "https://example.com/geolocation-app",
 		github_link: "https://github.com/example/geolocation-app",
-		image: "assets/images/6-geolocation.jpg",
+		image: "images/6-geolocation.jpg",
 		comments: [
 			{
 				username: "victoria",
@@ -122,6 +128,53 @@ const projects = [
 	},
 ];
 
-const projectList = document.getElementById("project");
+//Function For Html Page Structure 
+function generateProjectList(project) {
+  return `
+    <li class="items">
+        <div class="items-container">
+            
+        <div class="number">${projects.indexOf(project) + 1}</div>
+     
+       
+      <div class="details">
+        <img src="${project.image}" alt="${project.title}">
+        <h2>${project.title}</h2>
+        <p>${project.brief}</p>
+        
+        <div>
+          <a class="view-demo" href="${project.details_link}">View Project</a>
+          <a href="${project.github_link}">GitHub Repository</a>
+        </div>
+        
+        
+        <div class="comment">
+          <h2>Comments:</h2>
+          
+          <ul>
+            ${project.comments.map(comment => `
+              <li>
+                <strong>${comment.username}:</strong> ${comment.comment}
+              </li>
+            `).join(",")}
+          </ul>
+        </div>
+        
+      </div>
+      
+     </div>
+    </li>
+  `;
+}
 
-// Your solution here.
+//Function To Iterate Through Projects Array
+function displayProjectList() {
+  const projectList = document.querySelector(".project-list");
+  projects.forEach(project => {
+    const cardHtml = generateProjectList(project);
+    projectList.innerHTML += cardHtml;
+  });
+}
+
+//Display On Page Load
+window.addEventListener('DOMContentLoaded', displayProjectList);
