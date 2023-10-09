@@ -25,7 +25,7 @@ A dynamic project page built using JavaScript to display a list of projects with
 
 
 ## Links
-- Live site - ()
+- Live site - (https://dynamic-project-page.netlify.app/ )
 - Solution link - ()
 
 ## Author 
